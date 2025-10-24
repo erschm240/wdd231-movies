@@ -1,6 +1,18 @@
 /* https://coolors.co/084c61-9c3e85-ef5b5b-faf3dd  */
 @import 'partials/header.css';
 @import 'partials/footer.css';
+@import 'home.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+:root {
+    --color1: #084C61;
+    --color2: #9C3E85;
+    --color3: #EF5B5B;
+    --color4: #FAF3DD;
+    --heading-font: "Cantata One", Georgia, "Times New Roman", serif;
+    --paragraph-font: "Nunito Sans", "Calibri", sans-serif;
+}
 
 * {
     margin: 0;
@@ -8,5 +20,12 @@
 
 body {
     background-color: var(--color4);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+}
+
+p {
+    font-family: var(--paragraph-font);
 }

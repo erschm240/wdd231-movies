@@ -9,8 +9,11 @@ footer {
 footer a {
     color: var(--color4);
     text-decoration: none;
+    font-family: var(--paragraph-font);
+    margin-right: 20px;
 }
 
 footer a:hover {
     color: var(--color3);
+    margin-right: 20px;
 }
