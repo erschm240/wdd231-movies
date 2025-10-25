@@ -1,16 +1,16 @@
-.intro {
+#intro {
   display: grid;
   grid-template-columns: 1fr;
 }
 
-.hero-img {
+#hero-img {
   opacity: 35%;
   width: 100%;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 }
 
-.intro > p {
+#intro > p {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   z-index: 1;
@@ -21,14 +21,14 @@
   font-weight: bold;
 }
 
-.content {
+#content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 20px;
   margin: 20px;
 }
 
-.content img {
+#content img {
   width: 100%;
   max-width: 100px;
   margin: 10px;
@@ -45,4 +45,10 @@
 
 .movie-info {
   margin: 10px;
+}
+
+@media screen and (min-width: 700px) {
+  #content {
+  grid-template-columns: 1fr 1fr;
+  }
 }

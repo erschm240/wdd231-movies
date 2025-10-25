@@ -74,7 +74,7 @@ input, form {
 #main-search {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 5%;
+    gap: 50px;
 }
 
 #filters {
@@ -83,8 +83,8 @@ input, form {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
     max-height: fit-content;
+    gap: 10px;
 }
 
 #filters div {
@@ -101,7 +101,9 @@ input, form {
 }
 
 #search-results {
-    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 150px;
     margin-top: -10px; /* Make the filters and results sections line up at the top */
 }
 
@@ -112,12 +114,14 @@ input, form {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
+    max-width: fit-content;
 }
 
 .result img {
     margin: 0 auto;
     margin-bottom: 10px;
     width: 100%;
+    max-width: 500px;
 }
 
 @media screen and (min-width: 700px) {
@@ -129,11 +133,17 @@ input, form {
         display: flex;
         flex-direction: column;
     }
-}
 
-/* We can use this if we want three columns on a desktop screen, bit it's optional */
-/* @media screen and (min-width: 960px) {
     #search-results {
-        grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     }
-} */
+}
+@media screen and (min-width: 960px) {
+    #filters {
+        grid-template-columns: 30% 70%;
+    }
+    /* We can use this if we want three columns on a desktop screen, bit it's optional */
+    /* #search-results {
+        grid-template-columns: 1fr 1fr 1fr;
+    } */
+}
