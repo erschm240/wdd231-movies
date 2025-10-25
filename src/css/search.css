@@ -1,0 +1,33 @@
+#search-banner {
+    display: grid;
+}
+
+#s-banner-img {
+    z-index: -1;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    max-width: 100%;
+}
+
+.search {
+    z-index: 2;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+#searchbox {
+    display: flex;
+}
+
+#searchbox button img {
+    width: 25px;
+}
+
+#search-results {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.result img {
+    width: 50px;
+}

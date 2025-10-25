@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="images/temporary_icon.webp">
+        <h1>Animated Movies</h1>
+        <button class="menu-btn">Menu</button>
+    </header>
+    <main>
+        <div id="search-banner">
+            <img src="images/search-background.jpg" alt="" id="s-banner-img">
+            <form class="search">
+                <label for="search"></label>
+                <div id="searchbox">
+                    <input id="search" name="search" placeholder="Find a movie">
+                    <button><img src="images/search-icon.png" alt="search" class="searchpic"></button>
+                </div>
+            </form>
+        </div>
+        <section id="main-search">
+            <form action="/submit" method="post" id="filters">
+                <h3>Filters</h3>
+                <h6>Genre</h6>
+                <label>
+                    <input type="checkbox" name="genre" value="">
+                    Action
+                </label>
+                <label>
+                    <input type="checkbox" name="genre" value="comedy">
+                    Comedy
+                </label>
+                <label>
+                    <input type="checkbox" name="genre" value="drama">
+                    Drama
+                </label>
+                <label>
+                    <input type="checkbox" name="genre" value="fantasy">
+                    Fantasy
+                </label>
+                <label>
+                    <input type="checkbox" name="genre" value="romance">
+                    Romance
+                </label>
+                <label>
+                    <input type="checkbox" name="genre" value="thriller">
+                    Thriller
+                </label>
+                <label>
+                    <input type="checkbox" name="genre" value="mystery">
+                    Mystery
+                </label>
+                <label>
+                    <input type="checkbox" name="genre" value="horror">
+                    Horror
+                </label>
+                <hr>
+                <h3>Length</h3>
+                <label>
+                    <input type="checkbox" name="length" value="1hour">
+                    Around an hour
+                </label>
+                <label>
+                    <input type="checkbox" name="length" value="2hour">
+                    Around 2 hours
+                </label>
+                <label>
+                    <input type="checkbox" name="length" value="3hour">
+                    Around 3 hours
+                </label>
+                <label>
+                    <input type="checkbox" name="length" value="long">
+                    Over 3 hours
+                </label>
+                <hr>
+                <label>
+                    <input type="checkbox" name="rating" value=">=3">
+                    3 or more stars
+                </label>
+            </form>
+            <section id="search-results">
+                <div class="result">
+                    <img src="images/placeholder-movie.jpg" alt="movie poster">
+                    <h2>Very Cool Name</h2>
+                    <p>★★★★☆</p>
+                    <p>Optional: Genre?</p>
+                </div>
+                <div class="result">
+                    <img src="images/placeholder-movie.jpg" alt="movie poster">
+                    <h2>Semi Cool Name</h2>
+                    <p>★★★☆☆</p>
+                    <p>Optional: Genre?</p>
+                </div>
+                <div class="result">
+                    <img src="images/placeholder-movie.jpg" alt="movie poster">
+                    <h2>The Coolest Name</h2>
+                    <p>★★★★★</p>
+                    <p>Optional: Genre?</p>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <p>©Animated Movies 2025</p>
+        <a href="">Link</a>
+    </footer>
+</body>
+</html>
