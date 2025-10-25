@@ -1,3 +1,7 @@
+#main-search {
+    margin: 20px;
+}
+
 #search-banner {
     display: grid;
 }
@@ -17,6 +21,8 @@
 
 #searchbox {
     display: flex;
+    justify-self: center;
+    align-self: center;
 }
 
 #searchbox button img {
@@ -31,3 +37,8 @@
 .result img {
     width: 50px;
 }
+
+input, form {
+    font-family: var(--paragraph-font);
+}
+
