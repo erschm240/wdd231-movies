@@ -4,20 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <img class="logo" src="temporary_icon.webp">
+        <img class="logo" src="images/temporary_icon.webp">
         <h1>Animated Movies</h1>
         <button class="menu-btn">Menu</button>
     </header>
-    <main>
-        <img src="placeholder-movie.jpg" alt="placeholder movie" class="movie-poster">
-        <h1>Name</h1>
-        <h2>Producer</h2>
-        <p>★★★★☆</p>
-        <h3>Description</h3>
-        <p>Words about the fake movie we are creating, wow it is so cool. So very cool. And there's a guy, and a girl, and they do things. Very interesting things. With dangerous things happening. And maybe romance, you'll have to watch to know. Anyway, it's so cool.</p>
+    <main id="movie-main">
+        <img src="images/placeholder-movie.jpg" alt="placeholder movie" class="movie-poster">
+        <div class="movie-info">
+            <h1>Name</h1>
+            <h2>Producer</h2>
+            <p class="rating">Rating: ★★★★☆</p>
+            <h3>Description</h3>
+            <p>Words about the fake movie we are creating, wow it is so cool. So very cool. And there's a guy, and a girl, and they do things. Very interesting things. With dangerous things happening. And maybe romance, you'll have to watch to know. Anyway, it's so cool.</p>
+            <div class="movie-actions">
+                <button>Watchlist</button>
+                <button>Rate</button>
+            </div>
+        </div>
     </main>
     <footer>
         <p>©Animated Movies</p>
