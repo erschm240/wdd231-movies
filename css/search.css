@@ -10,11 +10,19 @@
     z-index: -1;
     grid-column: 1/2;
     grid-row: 1/2;
-    max-width: 100%;
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
 }
 
 .search {
     z-index: 2;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: grid;
+}
+
+label {
     grid-column: 1/2;
     grid-row: 1/2;
 }
@@ -23,6 +31,11 @@
     display: flex;
     justify-self: center;
     align-self: center;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 50%;
 }
 
 #searchbox button img {
@@ -40,5 +53,87 @@
 
 input, form {
     font-family: var(--paragraph-font);
+    border: none;
 }
 
+.search input {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 100%;
+    font-size: 1em;
+    padding: 5px;
+}
+
+/* This just puts more space between the searchbox border and the magnifying glass image */
+.search button {
+    border: 2px solid white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#main-search {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5%;
+}
+
+#filters {
+    background-color: var(--color3);
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: fit-content;
+}
+
+#filters div {
+    display: flex;
+    flex-direction: column;
+}
+
+#filters h4 {
+    margin-bottom: 5px;
+}
+
+#filters input {
+    cursor: pointer;
+}
+
+#search-results {
+    margin-bottom: 50px;
+    margin-top: -10px; /* Make the filters and results sections line up at the top */
+}
+
+.result {
+    background-color: var(--color2);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.result img {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+@media screen and (min-width: 700px) {
+    #main-search {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    #filters {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* We can use this if we want three columns on a desktop screen, bit it's optional */
+/* @media screen and (min-width: 960px) {
+    #search-results {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+} */
