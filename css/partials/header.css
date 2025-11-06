@@ -5,19 +5,19 @@
     border-radius: 100%;
 }
 
-header {
+.header {
     display: flex;
     justify-content: space-between;
     background-color: var(--color1);
     color: var(--color4);
 }
 
-header > h1 {
+.header > h1 {
     padding: 20px;
     align-self: center;
 }
 
-header > .menu-btn {
+.header > .menu-btn {
     align-self: center;
     margin: 20px;
     background-color: var(--color4);
@@ -31,11 +31,19 @@ header > .menu-btn {
 
 .menu-nav {
     display: none;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 200px;
     align-content: center;
     flex-wrap: wrap;
     font-family: var(--heading-font);
+    background-color: var(--color3);
+    transition: all 2s;
+    width: 100%;
+    border-top: 2px solid var(--color4);
+}
+
+.divider {
+    border-right: 2px solid var(--color4);
 }
 
 .show {
@@ -45,6 +53,6 @@ header > .menu-btn {
 .menu-nav a {
     text-decoration: none;
     font-size: 1.4em;
-    color: white;
+    color: black;
     padding: 10px;
 }
