@@ -6,7 +6,7 @@ function setwatchlistSection() {
     watchlistSection.innerHTML = watchlistTemplate();
 }
 
-function setwatchlistSection() {
+function setRatingSection() {
     const watchlistSection = document.querySelector("#ratings");
     watchlistSection.innerHTML = watchlistTemplate();
 }
