@@ -5,6 +5,7 @@ results.addEventListener("click", function(event) {
     const movieName = chosen.querySelector("h2").textContent;
     console.log(movieName);
     window.location.href = `movie.html?name=${encodeURIComponent(movieName)}`;
+    // movieTemplate(data);
 })
 
 results.addEventListener("keydown", function(event) {

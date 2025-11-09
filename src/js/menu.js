@@ -5,7 +5,6 @@ menuButton.addEventListener('click', (e) => {
     let menu = document.querySelector('.menu-nav');
     menu.classList.toggle("show");
     console.log(menu);
-    movieTemplate(data);
 })
 
 // function enableNavigation() {
