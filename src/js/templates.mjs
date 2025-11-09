@@ -1,40 +1,20 @@
-export function watchlistTemplate() {
-    return `<section id="watchlist">
-                <h2>Watchlist</h2>
-                <div class="movie-container">
-                    <img src="images/temporary_thumbnail.webp" alt="A thumbnail of the rated movie.">
-                    <div class="movie-info">
-                        <h3>Awesome Movie Title</h3>
-                        <p>A description about the movie.</p>
-                    </div>
+export function watchContainerTemplate(guardiansData) {
+    return `<div class="movie-container">
+                <img src="${guardiansData.Poster}" alt="A thumbnail of ${guardiansData.Title}">
+                <div class="movie-info">
+                    <h3>${guardiansData.Title} (${guardiansData.Year})</h3>
+                    <p>IMDB ID: ${guardiansData.imdbID}</p>
                 </div>
-                <div class="movie-container">
-                    <img src="images/temporary_thumbnail.webp" alt="A thumbnail of the rated movie.">
-                    <div class="movie-info">
-                        <h3>Awesome Movie Title</h3>
-                        <p>A description about the movie.</p>
-                    </div>
-                </div>
-            </section>
-            `;
+            </div>`;
+
 }
 
 export function ratingsTemplate() {
-    return `<section id="ratings">
-                <h2>Ratings</h2>
-                <div class="movie-container">
-                    <img src="images/temporary_thumbnail.webp" alt="A thumbnail of the rated movie.">
-                    <div class="movie-info">
-                        <h3>Awesome Movie Title</h3>
-                        <p>★★★★★</p>
-                    </div>
+    return `<div class="movie-container">
+                <img src="images/temporary_thumbnail.webp" alt="A thumbnail of the rated movie.">
+                <div class="movie-info">
+                    <h3>Awesome Movie Title</h3>
+                    <p>★★★★★</p>
                 </div>
-                <div class="movie-container">
-                    <img src="images/temporary_thumbnail.webp" alt="A thumbnail of the rated movie.">
-                    <div class="movie-info">
-                        <h3>Awesome Movie Title</h3>
-                        <p>★★★★★</p>
-                    </div>
-                </div>
-            </section>`;
+            </div>`;
 }
