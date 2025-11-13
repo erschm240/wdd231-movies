@@ -1,9 +1,9 @@
 // This is where we will get the API data
 const baseUrl = "https://www.omdbapi.com/";
 
-const apiKey = import.meta.env.VITE_OMDB_API_KEY;
-// const apiKey = "616f22d1";
-console.log(apiKey);
+// const apiKey = import.meta.env.VITE_OMDB_API_KEY;
+const apiKey = "616f22d1";
+// console.log(apiKey);
 
 async function getJson(queryParams) {
     const url = `${baseUrl}?apikey=${apiKey}${queryParams}`;
@@ -19,7 +19,5 @@ export async function guardiansData() {
     console.log(data);
     return data.Search.slice(0, 3);
 }
-
-// getData();
 
 guardiansData();

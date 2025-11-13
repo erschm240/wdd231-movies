@@ -1,20 +1,21 @@
 // import "../css/style.css";
-import { watchContainerTemplate, ratingsTemplate, searchTemplate } from "./templates.mjs";
+import { watchlistTemplate, ratingsTemplate, searchTemplate } from "./templates.mjs";
 import { guardiansData } from "./movies.mjs";
 
-function setwatchlistSection() {
+async function setwatchlistSection() {
+    let data = await guardiansData();
     const watchlistSection = document.querySelector("#watchlist");
-    watchlistSection.innerHTML = watchContainerTemplate();
-    
+    let watchlistHTML = data.map(watchlistTemplate).join("");
+    watchlistSection.innerHTML += watchlistHTML;
+    console.log(watchlistHTML);
 }
 
-function setRatingSection() {
-    const ratingsSection = document.querySelector("#ratings");
-    ratingsSection.innerHTML = ratingsTemplate();
-}
-
-function setHomeContent() {
-    const contentSection = document.querySelector("#content");
+async function setRatingSection() {
+    let data = await guardiansData();
+    const ratingSection = document.querySelector("#ratings");
+    let ratingHTML = data.map(watchlistTemplate).join("");
+    ratingSection.innerHTML += ratingHTML;
+    console.log(ratingHTML);
 }
 
 async function setSearchContent() {
@@ -25,3 +26,5 @@ async function setSearchContent() {
 }
 
 setSearchContent();
+setwatchlistSection();
+setRatingSection();
