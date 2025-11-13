@@ -45,3 +45,32 @@ p {
 button {
     cursor: pointer;
 }
+
+/* Some styling for the landing page from GitHub */
+.root-index-body {
+    background-color: #084C61;
+}
+
+.root-index-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 3em;
+}
+
+.root-index-section {
+    background-color: #EF5B5B;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 50px;
+}
+
+.root-index-section a {
+    color: black;
+    font-family: var(--paragraph-font);
+}
+
+.root-index-section a:hover {
+    color: #084C61;
+}
