@@ -33,8 +33,8 @@ export function movieTemplate(data) {
         return `<img src="${data.Poster}" alt="${data.Title} poster" class="movie-poster">
         <div class="movie-info">
             <h1>${data.Title}</h1>
-            <h2>Producer</h2>
-            <p class="rating">Rating: ★★★★☆</p>
+            <h2>Producer: </h2>
+            <p class="rating">Rating: ${data.Ratings[0].Value}</p>
             <h3>Description</h3>
             <p>${data.Plot}</p>
             <div class="movie-actions">
