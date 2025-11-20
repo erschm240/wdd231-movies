@@ -23,13 +23,12 @@ export function searchTemplate(data) {
     return `<div class="result" tabindex="0">
                     <img src="${data.Poster}" alt="movie poster">
                     <h2>${data.Title}</h2>
-                    <p>★★★★★</p>
-                    <p>Optional: Genre?</p>
+                    <p>IMDB ID: ${data.imdbID}</p>
                 </div>`
 }
 
 export function movieTemplate(data) {
-    console.log("Movie data:", data);
+    console.log(data);
         return `<img src="${data.Poster}" alt="${data.Title} poster" class="movie-poster">
         <div class="movie-info">
             <h1>${data.Title}</h1>

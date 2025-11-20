@@ -1,4 +1,3 @@
-// This is where we will get the API data
 const baseUrl = "https://www.omdbapi.com/";
 
 // const apiKey = import.meta.env.VITE_OMDB_API_KEY;
@@ -21,14 +20,21 @@ async function getSingleMovieJson(movieID) {
 }
 
 export async function guardiansData() {
-    // Get the api results of movies that have "Guardians" in the title using the s letter. Use tt if looking up a movie IMDb ID.
+    // Get the api results of movies that have "Guardians" in the title using the s parameter. Use tt if looking up a movie IMDb ID.
     const data = await getJson("&s=Guardians");
     // console.log(data);
     return data.Search.slice(0, 3);
 }
 
+function generateRandomID() {
+    
+}
+
+function SearchResults() {
+
+}
+
 export async function singleMovieData() {
-    // Get the api results of movies that have "Guardians" in the title using the s letter. Use tt if looking up a movie IMDb ID.
     const data = await getSingleMovieJson("i=tt3896198");
     console.log(data);
     return data;
