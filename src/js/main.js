@@ -1,6 +1,7 @@
 // import "../css/style.css";
 import { watchlistTemplate, ratingsTemplate, searchTemplate, movieTemplate } from "./templates.mjs";
 import { guardiansData, singleMovieData } from "./movies.mjs";
+import { startMovie } from "./movie.mjs";
 
 async function setwatchlistSection() {
     let data = await guardiansData();
@@ -28,6 +29,7 @@ async function setMovieContent() {
     let movieContent = document.querySelector("#movie-main");
     let movieHTML = movieTemplate(data);
     movieContent.innerHTML = movieHTML;
+    startMovie();
 }
 
 setSearchContent();
