@@ -32,6 +32,7 @@
 .rateWrapper {
     position: relative;
     display: inline-block;
+    max-width: 52px;
 }
 
 .movie-actions button {
@@ -51,17 +52,26 @@
     min-width: 100px;
 }
 
+.rateIt label {
+    display: inline-flex;
+}
+
 .rateIt button {
-    width: 47px;
+    max-width: 47px;
     padding-left: 0;
     font-size: .8em;
     background-color: var(--color2);
+    margin-top: 0px;
 }
 
 .show {
     display: grid;
     grid-template-columns: 1fr 1fr;
     max-width: 20%;
+}
+
+.movie-actions.show-dropdown {
+    min-height: 210px;
 }
 
 :focus {
@@ -93,5 +103,10 @@
         margin-top: 20px;
         margin-right: 20px;
         font-size: .9em;
+    }
+
+    .rateIt button {
+        max-width: 55px;
+        margin-top: 0px;
     }
 }

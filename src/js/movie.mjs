@@ -1,10 +1,11 @@
 export function startMovie(data) {
-    // const data = data;
     const rate = document.querySelector(".rate");
+    const movieActions = document.querySelector(".movie-actions");
     rate.addEventListener('click', (e) => {
         let target = e.target;
         let ratingOptions = document.querySelector('.rateIt');
         ratingOptions.classList.toggle("show");
+        movieActions.classList.toggle("show-dropdown");
     })
     const rated = document.querySelector(".rateIt button");
     rated.addEventListener('click', (e) => {
