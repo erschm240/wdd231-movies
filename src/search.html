@@ -25,12 +25,12 @@
     </header>
     <main>
         <div id="search-banner">
-            <img src="images/search-background.jpg" alt="" id="s-banner-img">
-            <form class="search">
+            <img src="images/search-background.jpg" alt="Illustrated image of glowing branches" id="s-banner-img">
+            <form action="search.html" method="get" class="search">
                 <label for="search"></label>
                 <div id="searchbox">
-                    <input id="search" name="search" placeholder="Find a movie">
-                    <button><img src="images/search-icon.png" alt="search" class="searchpic"></button>
+                    <input id="search" type="search" name="search" placeholder="Find a movie">
+                    <button id="search-btn" type="submit"><img src="images/search-icon.png" alt="search" class="searchpic"></button>
                 </div>
             </form>
         </div>
@@ -102,6 +102,7 @@
                 </div>
             </form> -->
             <section id="search-results">
+            <h1 class="loading-msg">No results yet...</h1>
                 <!-- <div class="result" tabindex="0">
                     <img src="images/placeholder-movie.jpg" alt="movie poster">
                     <h2>Very Cool Name</h2>
@@ -127,7 +128,6 @@
         <p>©Movies 2025</p>
         <a href="search.html">Search Page</a>
         <a href="movie.html">Movies Page</a>
-        <a href="">Link</a>
     </footer>
 </body>
 </html>

@@ -26,16 +26,19 @@ export async function guardiansData() {
     return data.Search.slice(0, 3);
 }
 
+export async function searchResults(query) {
+    const data = await getJson(`&s=${encodeURIComponent(query)}`);
+    if (!data.Search) return [];
+    return data.Search;
+}
+
 function generateRandomID() {
     
 }
 
-function SearchResults() {
-
-}
-
 export async function singleMovieData() {
     const data = await getSingleMovieJson("i=tt3896198");
+    // console.log(data);
     return data;
 }
 

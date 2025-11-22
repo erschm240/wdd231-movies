@@ -19,11 +19,7 @@ async function setRatingSection() {
 }
 
 async function setSearchContent() {
-    let data = await guardiansData();
-    let searchContent = document.querySelector("#search-results");
-    if (!searchContent) return;
-    let searchHTML = data.map(searchTemplate).join("");
-    searchContent.innerHTML += searchHTML;
+    // let data = await guardiansData();
 }
 
 async function setMovieContent() {
