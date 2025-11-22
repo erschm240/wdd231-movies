@@ -27,7 +27,7 @@ export function ratingsTemplate({key, value}) {
 
 export function searchTemplate(data) {
     return `<div class="result" tabindex="0">
-                    <img src="${data.Poster}" alt="movie poster">
+                    <img src="${data.Poster}" alt="${data.Title} movie poster">
                     <h2>${data.Title}</h2>
                     <p>IMDB ID: ${data.imdbID}</p>
                 </div>`
@@ -38,7 +38,7 @@ export function movieTemplate(data) {
         return `<img src="${data.Poster}" alt="${data.Title} poster" class="movie-poster">
         <div class="movie-info">
             <h1>${data.Title}</h1>
-            <h2>Producer: </h2>
+            <p>Genre: ${data.Genre}</p>
             <p class="rating">Rating: ${data.Ratings[0].Value}</p>
             <h3>Description</h3>
             <p>${data.Plot}</p>
