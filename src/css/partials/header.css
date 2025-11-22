@@ -45,7 +45,7 @@
     border-right: 2px solid var(--color4);
 }
 
-.show {
+.showH {
     display: flex;
 }
 

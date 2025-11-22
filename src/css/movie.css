@@ -29,6 +29,11 @@
     padding: 10px 0 25px 0;
 }
 
+.rateWrapper {
+    position: relative;
+    display: inline-block;
+}
+
 .movie-actions button {
     background-color: var(--color3);
     color: black;
@@ -36,6 +41,31 @@
     margin-top: 10px;
     margin-right: 10px;
     font-weight: 600;
+}
+
+.rateIt {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 100px;
+}
+
+.rateIt button {
+    width: 47px;
+    padding-left: 0;
+    font-size: .8em;
+    background-color: var(--color2);
+}
+
+.show {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 20%;
+}
+
+:focus {
+    outline-offset: 6px;
 }
 
 @media screen and (min-width: 500px) {
