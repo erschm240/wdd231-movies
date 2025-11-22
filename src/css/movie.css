@@ -64,6 +64,10 @@
     max-width: 20%;
 }
 
+:focus {
+    outline-offset: 6px;
+}
+
 @media screen and (min-width: 500px) {
     .movie-poster {
         width: 300px;
