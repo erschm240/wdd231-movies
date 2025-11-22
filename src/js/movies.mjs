@@ -36,7 +36,6 @@ function SearchResults() {
 
 export async function singleMovieData() {
     const data = await getSingleMovieJson("i=tt3896198");
-    console.log(data);
     return data;
 }
 
