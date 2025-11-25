@@ -39,6 +39,12 @@ function getChosenMovie() {
 export async function singleMovieData() {
     const urlParams = new URLSearchParams(window.location.search);
     const movieID = urlParams.get("id");
+    if (!movieID) {
+        const errorMsg = document.querySelector(".loading-msg");
+        errorMsg.textContent = "No movie ID found in URL. Try visiting the search page and searching for a movie!";
+        console.error("No movie ID found in URL.");
+        return null;
+    }
     const data = await getSingleMovieJson(`i=${movieID}`);
     // console.log(data);
     return data;
