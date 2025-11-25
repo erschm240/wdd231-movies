@@ -5,6 +5,7 @@ import { startMovie } from "./movie.mjs";
 
 function setwatchlistSection() {
     const watchlistSection = document.querySelector("#watchlist");
+    const noMoviesMsg = document.querySelector(".no-watchlist-msg");
     if (!watchlistSection) return; // prevent error messages of null on pages where this section does not exist (search and movie). This works the same as the other if statements in the functions below.
     const toWatchItems = [];
     for (let i = 0; i < localStorage.length; i++) {
@@ -15,11 +16,18 @@ function setwatchlistSection() {
         }
     }
     let watchlistHTML = toWatchItems.map(watchlistTemplate).join("");
+    if (toWatchItems.length === 0) {
+        noMoviesMsg.style.display = "block";
+        return;
+    }
+    noMoviesMsg.style.display = "none";
     watchlistSection.innerHTML += watchlistHTML;
 }
 
 function setRatingSection() {
     const ratingSection = document.querySelector("#ratings");
+    const noMoviesMsg = document.querySelector(".no-ratings-msg");
+
     if (!ratingSection) return;
     const ratedItems = [];
     for (let i = 0; i < localStorage.length; i++) {
@@ -30,6 +38,11 @@ function setRatingSection() {
         }
     }
     let ratingHTML = ratedItems.map(ratingsTemplate).join("");
+    if (ratedItems.length === 0) {
+        noMoviesMsg.style.display = "block";
+        return;
+    }
+    noMoviesMsg.style.display = "none";
     ratingSection.innerHTML += ratingHTML;
 }
 
