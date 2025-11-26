@@ -26,7 +26,8 @@ export function ratingsTemplate({key, value}) {
 }
 
 export function searchTemplate(data) {
-    return `<div class="result" tabindex="0">
+    console.log("Incoming data:", data);
+    return `<div class="result" data-id="${data.imdbID}" tabindex="0">
                     <img src="${data.Poster}" alt="${data.Title} movie poster">
                     <h2>${data.Title}</h2>
                     <p>IMDB ID: ${data.imdbID}</p>

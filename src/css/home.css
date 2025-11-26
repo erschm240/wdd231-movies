@@ -17,7 +17,7 @@
   justify-self: center;
   align-self: center;
   width: 80%;
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: bold;
 }
 
@@ -50,5 +50,9 @@
 @media screen and (min-width: 700px) {
   #content {
   grid-template-columns: 1fr 1fr;
+  }
+
+  #intro > p {
+    font-size: 1.5em;
   }
 }

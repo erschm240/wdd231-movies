@@ -38,6 +38,10 @@ label {
     width: 50%;
 }
 
+#searchbox input {
+    flex: 1;
+}
+
 #searchbox button img {
     width: 25px;
 }
@@ -77,7 +81,16 @@ input, form {
     gap: 50px;
 }
 
-#filters {
+#search:focus {
+    outline: none;
+}
+
+.loading-msg {
+    grid-column: 1 / 6;
+    text-align: center;
+}
+
+/* #filters {
     background-color: var(--color3);
     padding: 20px;
     border-radius: 5px;
@@ -98,7 +111,7 @@ input, form {
 
 #filters input {
     cursor: pointer;
-}
+} */
 
 #search-results {
     display: grid;
@@ -137,31 +150,10 @@ input, form {
     }
 }
 
-@media screen and (min-width: 700px) {
-    /* #main-search {
-        grid-template-columns: 1fr 2fr;
-    } */
-
-    /* #filters {
-        display: flex;
-        flex-direction: column;
-    } */
-}
-
 @media screen and (min-width: 770px) {
     #search-results {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-}
-
-@media screen and (min-width: 960px) {
-    #filters {
-        grid-template-columns: 30% 70%;
-    }
-    /* We can use this if we want three columns on a desktop screen, bit it's optional */
-    /* #search-results {
-        grid-template-columns: 1fr 1fr 1fr;
-    } */
 }
 
 @media screen and (min-width: 1050px) {
