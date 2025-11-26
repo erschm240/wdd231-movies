@@ -29,25 +29,32 @@
 }
 
 .menu-nav {
-    display: none;
+    /* display: none; */
+    display: flex;
     justify-content: space-evenly;
+    max-height: 0px;
+    overflow: hidden;
     width: 200px;
     align-content: center;
     flex-wrap: wrap;
     font-family: var(--heading-font);
     background-color: var(--color3);
-    transition: all 2s;
+    transition: all 0.5s ease;
     width: 100%;
     border-top: 2px solid var(--color4);
+}
+
+.menu-nav.showH {
+    max-height: 100px;
 }
 
 .divider {
     border-right: 2px solid var(--color4);
 }
 
-.showH {
+/* .showH {
     display: flex;
-}
+} */
 
 .menu-nav a {
     text-decoration: none;

@@ -13,12 +13,12 @@ export function startMovie(data) {
         let rating = document.querySelector('input[name="starRating"]:checked')?.value;
         const info = [`${data.Title}`, `${data.imdbID}`, rating, `${data.Poster}`];
         localStorage.setItem(`rated${data.Title}`, JSON.stringify(info));
+        rated.classList.toggle("submitted");
     })
     const toWatch = document.querySelector(".watchlist");
     toWatch.addEventListener('click', (e) => {
         const info = [`${data.Title}`, `${data.imdbID}`, `${data.Poster}`];
         localStorage.setItem(`watch${data.Title}`, JSON.stringify(info));
-        toWatch.classList.toggle(".clicked");
-        console.log("watch worked");
+        toWatch.classList.toggle("clicked");
     })
 }
