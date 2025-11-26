@@ -18,6 +18,7 @@ export function startMovie(data) {
     toWatch.addEventListener('click', (e) => {
         const info = [`${data.Title}`, `${data.imdbID}`, `${data.Poster}`];
         localStorage.setItem(`watch${data.Title}`, JSON.stringify(info));
+        toWatch.classList.toggle(".clicked");
         console.log("watch worked");
     })
 }
