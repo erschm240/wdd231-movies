@@ -53,6 +53,7 @@ label {
 
 .result img {
     width: 50px;
+    border-radius: 5px;
 }
 
 input, form {
@@ -90,34 +91,10 @@ input, form {
     text-align: center;
 }
 
-/* #filters {
-    background-color: var(--color3);
-    padding: 20px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    max-height: fit-content;
-    gap: 10px;
-}
-
-#filters div {
-    display: flex;
-    flex-direction: column;
-}
-
-#filters h4 {
-    margin-bottom: 5px;
-}
-
-#filters input {
-    cursor: pointer;
-} */
-
 #search-results {
     display: grid;
     grid-template-columns: 1fr;
     margin-bottom: 150px;
-    margin-top: -10px; /* Make the filters and results sections line up at the top */
 }
 
 .result {
@@ -129,6 +106,7 @@ input, form {
     flex-direction: column;
     max-width: fit-content;
     cursor: pointer;
+    color: white;
 }
 
 .result img {

@@ -6,22 +6,3 @@ menuButton.addEventListener('click', (e) => {
     menu.classList.toggle("showH");
     console.log(menu);
 })
-
-// function enableNavigation() {
-//   menuButton.addEventListener('click', (ev) => {
-//     let target = ev.target;
-//     document.querySelector('.global-nav').classList.toggle("show");
-//     if (target.tagName != "BUTTON") {
-//       target = target.closest("button");
-//     }
-//     if (document.querySelector('.global-nav').classList.contains("show")) {
-//       target.setAttribute("aria-expanded", true);
-//     } else {
-//       target.setAttribute("aria-expanded", false);
-//     }
-
-//     console.log("toggle");
-//   })
-// }
-
-// enableNavigation();

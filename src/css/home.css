@@ -21,6 +21,16 @@
   font-weight: bold;
 }
 
+hr {
+  margin: 10px 0px;
+  border: 2px solid var(--color1);
+  border-radius: 5px;
+}
+
+.no-watchlist-msg, .no-ratings-msg {
+  margin-top: 10px;
+}
+
 #content {
   display: grid;
   grid-template-columns: 1fr;
@@ -41,6 +51,7 @@
   background-color: var(--color2);
   color: white;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .movie-info {

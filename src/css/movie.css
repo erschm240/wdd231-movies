@@ -5,7 +5,8 @@
 .movie-poster {
     width: 200px;
     height: 266px;
-    padding: 50px 10px;
+    margin: 50px 10px;
+    border-radius: 5px;
 }
 
 .movie-info h1 {
@@ -43,6 +44,7 @@
     margin-right: 10px;
     font-weight: 600;
     transition: 0.3s ease;
+    border-radius: 3px;
 }
 
 .movie-actions button.clicked {
@@ -69,6 +71,7 @@
     background-color: var(--color2);
     margin-top: 0px;
     transition: 0.3s ease;
+    color: white;
 }
 
 .rateIt button.submitted {

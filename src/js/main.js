@@ -1,6 +1,5 @@
-// import "../css/style.css";
-import { watchlistTemplate, ratingsTemplate, searchTemplate, movieTemplate } from "./templates.mjs";
-import { guardiansData, singleMovieData } from "./movies.mjs";
+import { watchlistTemplate, ratingsTemplate, movieTemplate } from "./templates.mjs";
+import { singleMovieData } from "./movies.mjs";
 import { startMovie } from "./movie.mjs";
 
 function setwatchlistSection() {
@@ -46,10 +45,6 @@ function setRatingSection() {
     ratingSection.innerHTML += ratingHTML;
 }
 
-async function setSearchContent() {
-    // let data = await guardiansData();
-}
-
 async function setMovieContent() {
     let data = await singleMovieData();
     let movieContent = document.querySelector("#movie-main");
@@ -59,7 +54,6 @@ async function setMovieContent() {
     startMovie(data);
 }
 
-setSearchContent();
 setwatchlistSection();
 setRatingSection();
 setMovieContent();
