@@ -43,9 +43,3 @@ results.addEventListener("keydown", function(event) {
             window.location.href = `movie.html?id=${encodeURIComponent(movieID)}`;
         }
 });
-
-
-   if (e.key === 'Enter' || e.key === ' ' || e.code === 'Space') {
-    e.preventDefault(); // avoid page scroll on Space
-    const movieID = active.dataset.id;
-    window.location.href = `movie.html?id=${encodeURIComponent(movieID)}`;
