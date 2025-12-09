@@ -1,4 +1,3 @@
-import { act } from "react";
 import { searchResults } from "./movies.mjs";
 import { searchTemplate } from "./templates.mjs";
 
@@ -6,6 +5,7 @@ const results = document.querySelector("#search-results");
 
 async function DisplaySearchResults() {
     const query = document.querySelector("#search").value.trim();
+    // sanitizeSearch(query);
     if (!query) return;
     console.log(query);
     const data = await searchResults(query);
@@ -19,6 +19,46 @@ async function DisplaySearchResults() {
     const searchHTML = data.map(searchTemplate).join("");
     searchContent.innerHTML += searchHTML;
 }
+
+// function sanitizeSearch(query) {
+//     const query = document.querySelector("#search").value.trim();
+//     const loadingMsg = document.querySelector(".loading-msg-s");
+//     for (let i = 0; i < query.length; i++) {
+//         const character = query[i];
+//         switch (character) {
+//             case "<":
+//             loadingMsg.textContent = "Bad search. Please try again.";
+//             break;
+//             case ">":
+//             loadingMsg.textContent = "Bad search. Please try again.";
+//             break;
+//             case "\"":
+//             loadingMsg.textContent = "Bad search. Please try again.";
+//             break;
+//             case "'":
+//             loadingMsg.textContent = "Bad search. Please try again.";
+//             break;
+//             case ";":
+//             loadingMsg.textContent = "Bad search. Please try again.";
+//             break;
+//             case "/":
+//             loadingMsg.textContent = "Bad search. Please try again.";
+//             break;
+//             case "\\":
+//             loadingMsg.textContent = "Bad search. Please try again.";
+//             break;
+//             case "|":
+//             loadingMsg.textContent = "Bad search. Please try again.";
+//             break;
+//             case "%":
+//             loadingMsg.textContent = "Bad search. Please try again.";
+//             break;
+//             case "`":
+//             loadingMsg.textContent = "Bad search. Please try again.";
+//             break;
+//         }
+//     }
+// }
 
 document.querySelector(".search").addEventListener("submit", function(event) {
     event.preventDefault();
