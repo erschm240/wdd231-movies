@@ -1,3 +1,4 @@
+import { act } from "react";
 import { searchResults } from "./movies.mjs";
 import { searchTemplate } from "./templates.mjs";
 
@@ -25,20 +26,26 @@ document.querySelector(".search").addEventListener("submit", function(event) {
 });
 
 results.addEventListener("click", function(event) {
-    const chosen = event.target.closest(".result");
+    let chosen = event.target.closest(".result");
     if (!chosen) return;
-    const movieName = chosen.querySelector("h2").textContent;
     const movieID = chosen.dataset.id;
     console.log(movieID);
     window.location.href = `movie.html?id=${encodeURIComponent(movieID)}`;
 });
 
 results.addEventListener("keydown", function(event) {
-    if (event.target.matches(".result")) {
-        if (event.key == 'Enter' || event.key == ' ') {
-            const movieName = event.target.querySelector("h2").textContent;
-            const movieID = chosen.dataset.id;
+    const active = document.activeElement;
+    if (!active || !active.classList.contains("result")) return;
+
+        if (event.key === 'Enter' || event.key === ' ' || event.code === 'Space') {
+            event.preventDefault();
+            const movieID = active.dataset.id;
             window.location.href = `movie.html?id=${encodeURIComponent(movieID)}`;
         }
-    }
 });
+
+
+   if (e.key === 'Enter' || e.key === ' ' || e.code === 'Space') {
+    e.preventDefault(); // avoid page scroll on Space
+    const movieID = active.dataset.id;
+    window.location.href = `movie.html?id=${encodeURIComponent(movieID)}`;
