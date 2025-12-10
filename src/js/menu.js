@@ -1,27 +1,18 @@
 let menuButton = document.querySelector('.menu-btn');
+let menu_nav = document.querySelector(".menu-nav");
 
 menuButton.addEventListener('click', (e) => {
     let target = e.target;
     let menu = document.querySelector('.menu-nav');
     menu.classList.toggle("showH");
-    console.log(menu);
 })
 
-// function enableNavigation() {
-//   menuButton.addEventListener('click', (ev) => {
-//     let target = ev.target;
-//     document.querySelector('.global-nav').classList.toggle("show");
-//     if (target.tagName != "BUTTON") {
-//       target = target.closest("button");
-//     }
-//     if (document.querySelector('.global-nav').classList.contains("show")) {
-//       target.setAttribute("aria-expanded", true);
-//     } else {
-//       target.setAttribute("aria-expanded", false);
-//     }
-
-//     console.log("toggle");
-//   })
-// }
-
-// enableNavigation();
+menu_nav.addEventListener("click", (e) => {
+    let links = menu_nav.querySelectorAll("a");
+    if (links.length < 2) return;
+    let rect = menu_nav.getBoundingClientRect();
+    let clickX = e.clientX - rect.left;
+    let half = rect.width / 2;
+    let chosenLink = clickX < half ? links[0] : links[1];
+    window.location.href = chosenLink.href;
+})
