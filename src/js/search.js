@@ -5,9 +5,8 @@ const results = document.querySelector("#search-results");
 
 async function DisplaySearchResults() {
     const query = document.querySelector("#search").value.trim();
-    // sanitizeSearch(query);
+    if (!sanitizeSearch(query)) return;
     if (!query) return;
-    console.log(query);
     const data = await searchResults(query);
     const searchContent = document.querySelector("#search-results");
     searchContent.innerHTML = "";
@@ -20,45 +19,36 @@ async function DisplaySearchResults() {
     searchContent.innerHTML += searchHTML;
 }
 
-// function sanitizeSearch(query) {
-//     const query = document.querySelector("#search").value.trim();
-//     const loadingMsg = document.querySelector(".loading-msg-s");
-//     for (let i = 0; i < query.length; i++) {
-//         const character = query[i];
-//         switch (character) {
-//             case "<":
-//             loadingMsg.textContent = "Bad search. Please try again.";
-//             break;
-//             case ">":
-//             loadingMsg.textContent = "Bad search. Please try again.";
-//             break;
-//             case "\"":
-//             loadingMsg.textContent = "Bad search. Please try again.";
-//             break;
-//             case "'":
-//             loadingMsg.textContent = "Bad search. Please try again.";
-//             break;
-//             case ";":
-//             loadingMsg.textContent = "Bad search. Please try again.";
-//             break;
-//             case "/":
-//             loadingMsg.textContent = "Bad search. Please try again.";
-//             break;
-//             case "\\":
-//             loadingMsg.textContent = "Bad search. Please try again.";
-//             break;
-//             case "|":
-//             loadingMsg.textContent = "Bad search. Please try again.";
-//             break;
-//             case "%":
-//             loadingMsg.textContent = "Bad search. Please try again.";
-//             break;
-//             case "`":
-//             loadingMsg.textContent = "Bad search. Please try again.";
-//             break;
-//         }
-//     }
-// }
+function sanitizeSearch(query) {
+    const loadingMsg = document.querySelector(".loading-msg-s");
+    for (let i = 0; i < query.length; i++) {
+        const character = query[i];
+        switch (character) {
+            case "<":
+            case ">":
+            case "\"":
+            case "'":
+            case ";":
+            case "/":
+            case "\\":
+            case "|":
+            case "%":
+            case "`":
+            case "$":
+            case "#":
+            case "(":
+            case ")":
+            case "{":
+            case "}":
+            case "[":
+            case "]":
+            case "@":
+                loadingMsg.textContent = "Bad search. Please try again.";
+                return false;
+        }
+    }
+    return true;
+}
 
 document.querySelector(".search").addEventListener("submit", function(event) {
     event.preventDefault();

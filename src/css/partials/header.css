@@ -29,7 +29,6 @@
 }
 
 .menu-nav {
-    /* display: none; */
     display: flex;
     justify-content: space-evenly;
     max-height: 0px;
@@ -51,10 +50,6 @@
 .divider {
     border-right: 2px solid var(--color4);
 }
-
-/* .showH {
-    display: flex;
-} */
 
 .menu-nav a {
     text-decoration: none;

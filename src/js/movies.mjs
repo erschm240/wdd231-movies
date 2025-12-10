@@ -1,6 +1,5 @@
 const baseUrl = "https://www.omdbapi.com/";
 
-// const apiKey = import.meta.env.VITE_OMDB_API_KEY;
 const apiKey = "616f22d1";
 
 async function getJson(searchWord) {
@@ -19,21 +18,10 @@ async function getSingleMovieJson(movieID) {
     return data;
 }
 
-export async function guardiansData() {
-    // Get the api results of movies that have "Guardians" in the title using the s parameter. Use tt if looking up a movie IMDb ID.
-    const data = await getJson("&s=Guardians");
-    // console.log(data);
-    return data.Search.slice(0, 3);
-}
-
 export async function searchResults(query) {
     const data = await getJson(`&s=${encodeURIComponent(query)}`);
     if (!data.Search) return [];
     return data.Search;
-}
-
-function getChosenMovie() {
-    
 }
 
 export async function singleMovieData() {
@@ -41,14 +29,12 @@ export async function singleMovieData() {
     const movieID = urlParams.get("id");
     if (!movieID) {
         const errorMsg = document.querySelector(".loading-msg");
+        if (!errorMsg) return;
         errorMsg.textContent = "No movie ID found in URL. Try visiting the search page and searching for a movie!";
-        console.error("No movie ID found in URL.");
         return null;
     }
     const data = await getSingleMovieJson(`i=${movieID}`);
-    // console.log(data);
     return data;
 }
 
-guardiansData();
 singleMovieData();
