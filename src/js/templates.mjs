@@ -1,7 +1,7 @@
 export function watchlistTemplate({key, value}) {
     const [title, imdbID, poster] = value;
     return `<div class="movie-container" data-id="${imdbID}" tabindex="0">
-                    <img src="${poster}" alt="A thumbnail of ${title}" onerror="this.src='./images/no-movie-poster.png';this.onerror=null;">
+                    <img src="${poster}" alt="A thumbnail of ${title}" onerror="this.src='./images/no-movie-poster.png';this.alt='No movie poster available.';this.onerror=null;">
                     <div class="movie-info">
                         <h3>${title}</h3>
                         <p>IMDB ID: ${imdbID}</p>
@@ -16,7 +16,7 @@ export function ratingsTemplate({key, value}) {
         starRating += "★";
     }
     return `<div class="movie-container" data-id="${imdbID}" tabindex="0">
-                    <img src="${poster}" alt="A thumbnail of ${title}" onerror="this.src='./images/no-movie-poster.png';this.onerror=null;">
+                    <img src="${poster}" alt="A thumbnail of ${title}" onerror="this.src='./images/no-movie-poster.png';this.alt='No movie poster available.';this.onerror=null;">
                     <div class="movie-info">
                         <h3>${title}</h3>
                         <p>IMDB ID: ${imdbID}</p>
@@ -27,14 +27,14 @@ export function ratingsTemplate({key, value}) {
 
 export function searchTemplate(data) {
     return `<div class="result" data-id="${data.imdbID}" tabindex="0">
-                    <img src="${data.Poster}" alt="${data.Title} movie poster" onerror="this.src='./images/no-movie-poster.png';this.onerror=null;">
+                    <img src="${data.Poster}" alt="${data.Title} movie poster" onerror="this.src='./images/no-movie-poster.png';this.alt='No movie poster available.';this.onerror=null;">
                     <h2>${data.Title}</h2>
                     <p>IMDB ID: ${data.imdbID}</p>
                 </div>`
 }
 
 export function movieTemplate(data) {
-    return `<img src="${data.Poster}" alt="${data.Title} poster" class="movie-poster" onerror="this.src='./images/no-movie-poster.png';this.onerror=null;">
+    return `<img src="${data.Poster}" alt="${data.Title} poster" class="movie-poster" onerror="this.src='./images/no-movie-poster.png';this.alt='No movie poster available.';this.onerror=null;">
     <div class="movie-info">
         <h1>${data.Title}</h1>
         <p>Genre: ${data.Genre}</p>
