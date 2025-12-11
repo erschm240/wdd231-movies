@@ -8,6 +8,8 @@
   width: 100%;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+  max-height: 400px;
+  object-fit: cover;
 }
 
 #intro > p {
