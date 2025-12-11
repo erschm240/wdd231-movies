@@ -8,7 +8,7 @@
   width: 100%;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-  max-height: 400px;
+  max-height: 450px;
   object-fit: cover;
 }
 
